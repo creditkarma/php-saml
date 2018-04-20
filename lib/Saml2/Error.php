@@ -35,9 +35,6 @@ class OneLogin_Saml2_Error extends Exception
      */
     public function __construct($msg, $code = 0, $args = null)
     {
-        assert('is_string($msg)');
-        assert('is_int($code)');
-
         $message = OneLogin_Saml2_Utils::t($msg, $args);
 
         parent::__construct($message, $code);
@@ -111,9 +108,6 @@ class OneLogin_Saml2_ValidationError extends Exception
      */
     public function __construct($msg, $code = 0, $args = null)
     {
-        assert('is_string($msg)');
-        assert('is_int($code)');
-
         $message = OneLogin_Saml2_Utils::t($msg, $args);
 
         parent::__construct($message, $code);
